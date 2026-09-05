@@ -8,13 +8,13 @@ import "vtk-voice-ai-sdk/dist/style.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <VoiceToolkit
-      appId="PASTE_YOUR_APP_ID_HERE"
-      apiKey="PASTE_YOUR_APP_KEY_HERE"
-      onEvent={(type, payload) => {
-        console.log("SDK EVENT:", type, payload);
-      }}
-    >
+<VoiceToolkit
+  appId={import.meta.env.VITE_AIROMOB_APP_ID}
+  apiKey={import.meta.env.VITE_AIROMOB_API_KEY}
+  onEvent={(type, payload) => {
+    console.log("SDK EVENT:", type, payload);
+  }}
+>
       <App />
     </VoiceToolkit>
   </React.StrictMode>
